@@ -32,7 +32,7 @@ USE DataWareHouse;
 GO
 
 -- Create the schemas
-CREATE SCHEMA bronze;
+CREATE SCHEMA Bronze;
 GO
 
 CREATE SCHEMA Silver;
