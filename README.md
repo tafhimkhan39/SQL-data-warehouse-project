@@ -33,16 +33,13 @@ This project involves:
 
 ---
 
-## 🛠️ Important Links & Tools:
+## 🛠️ Tools Used:
 
-Everything is for Free!
-- **[Datasets](datasets/):** Access to the project dataset (csv files).
-- **[SQL Server Express](https://www.microsoft.com/en-us/sql-server/sql-server-downloads):** Lightweight server for hosting your SQL database.
-- **[SQL Server Management Studio (SSMS)](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16):** GUI for managing and interacting with databases.
-- **[Git Repository](https://github.com/):** Set up a GitHub account and repository to manage, version, and collaborate on your code efficiently.
-- **[DrawIO](https://www.drawio.com/):** Design data architecture, models, flows, and diagrams.
-- **[Notion](https://www.notion.com/templates/sql-data-warehouse-project):** Get the Project Template from Notion
-- **[Notion Project Steps](https://thankful-pangolin-2ca.notion.site/SQL-Data-Warehouse-Project-16ed041640ef80489667cfe2f380b269?pvs=4):** Access to All Project Phases and Tasks.
+- **Datasets:** Access to the project dataset (csv files).
+- **SQL Server Express:** Lightweight server for hosting your SQL database.
+- **SQL Server Management Studio (SSMS):** GUI for managing and interacting with databases.
+- **Git Repository:** Set up a GitHub account and repository to manage, version, and collaborate on your code efficiently.
+- **DrawIO:** Design data architecture, models, flows, and diagrams.
 
 ---
 
@@ -74,6 +71,29 @@ These insights empower stakeholders with key business metrics, enabling strategi
 
 For more details, refer to [docs/requirements.md](docs/requirements.md).
 
+---
+
+## 💡 Challenges I Faced
+
+1. **Data Quality Issues** – The raw CSV files contained inconsistencies such as missing values, duplicates, and mismatched field formats, which required careful cleaning and validation.  
+2. **Schema Design Decisions** – Choosing the right star schema design and ensuring normalization/denormalization balance was a learning curve.  
+3. **ETL Complexity** – Building modular and reusable ETL scripts across the Bronze, Silver, and Gold layers required iterative debugging.  
+4. **SQL Query Optimization** – Writing efficient queries for analytics in the Gold layer was challenging, especially when handling large joins.  
+5. **Version Control Discipline** – Managing SQL scripts and DrawIO diagrams in GitHub required careful organization to maintain clarity.  
+
+---
+
+## 📚 What I Learned
+
+- **Practical Understanding of Medallion Architecture** – How data moves and evolves across Bronze, Silver, and Gold layers.  
+- **ETL Best Practices** – Building modular, reusable SQL scripts that ensure data consistency and accuracy.  
+- **Data Modeling Skills** – Designing and implementing a star schema for business-ready reporting.  
+- **SQL Performance Tuning** – Optimizing queries for better execution times in analytical workloads.  
+- **Project Organization** – The importance of clear documentation, folder structure, and using tools like Notion and GitHub to keep track of progress.  
+- **Real-World Problem Solving** – How to approach data inconsistencies and business requirements logically and iteratively.  
+
+--- 
+
 ## 📂 Repository Structure
 ```
 data-warehouse-project/
@@ -81,11 +101,9 @@ data-warehouse-project/
 ├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
 │
 ├── docs/                               # Project documentation and architecture details
-│   ├── etl.drawio                      # Draw.io file shows all different techniquies and methods of ETL
-│   ├── data_architecture.drawio        # Draw.io file shows the project's architecture
+│   ├── data_architecture.png           # Draw.io file shows the project's architecture
 │   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
-│   ├── data_flow.drawio                # Draw.io file for the data flow diagram
-│   ├── data_models.drawio              # Draw.io file for data models (star schema)
+│   ├── data_layers.pdf                 # Process of creating each layer
 │   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
 │
 ├── scripts/                            # SQL scripts for ETL and transformations
@@ -97,3 +115,12 @@ data-warehouse-project/
 │
 ├── README.md                           # Project overview and instructions
 ```
+
+---
+
+## 🙌 Credits
+
+This project was inspired by the tutorial created by [Data with Baraa](https://www.youtube.com/watch?v=SSKVgrwhzus) on YouTube.  
+His walkthrough on building a SQL-based Data Warehouse provided valuable guidance for structuring the ETL pipelines, designing the Medallion Architecture layers, and modeling the star schema.  
+
+Special thanks to him for sharing his knowledge and making the concepts easier to understand for learners and professionals alike.  
